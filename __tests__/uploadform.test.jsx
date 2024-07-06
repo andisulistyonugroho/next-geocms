@@ -30,7 +30,7 @@ describe("UploadForm", () => {
     expect(input.files.length).toBe(1);
     const warningmessage = screen.getByTestId("warning-msg");
     expect(warningmessage.textContent).toBe(
-      "invalid input, please uplaod json file"
+      "invalid input, please upload json file"
     );
   });
 
