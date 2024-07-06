@@ -53,7 +53,8 @@ describe("UploadForm", () => {
     const input = screen.getByTestId("geojson-input");
     await userEvent.upload(input, file2Upload);
     expect(input.files.length).toBe(1);
-    const warningmessage = screen.getByTestId("warning-msg").toBeNull();
+    const errormessage = screen.queryByTestId("warning-msg");
+    expect(errormessage).toBeNull();
     expect(screen.queryByText("Submit")).toBeInTheDocument();
   });
 });
