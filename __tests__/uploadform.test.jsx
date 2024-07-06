@@ -57,4 +57,8 @@ describe("UploadForm", () => {
     expect(errormessage).toBeNull();
     expect(screen.queryByText("Submit")).toBeInTheDocument();
   });
+
+  it("should render map", () => {
+    jest.mock("react-leaflet", () => jest.fn());
+  });
 });
